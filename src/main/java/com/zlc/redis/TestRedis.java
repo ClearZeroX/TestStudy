@@ -1,4 +1,4 @@
-package com.channelsoft.zlc.redis;
+package com.zlc.redis;
 
 import redis.clients.jedis.Jedis;
 

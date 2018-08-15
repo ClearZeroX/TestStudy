@@ -1,4 +1,4 @@
-package com.channelsoft.zlc.generator.po;
+package com.zlc.generator.po;
 
 import java.util.ArrayList;
 import java.util.Date;

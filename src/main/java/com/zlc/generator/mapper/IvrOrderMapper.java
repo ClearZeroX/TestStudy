@@ -1,8 +1,9 @@
-package com.channelsoft.zlc.generator.mapper;
+package com.zlc.generator.mapper;
 
-import com.channelsoft.zlc.generator.po.IvrOrder;
-import com.channelsoft.zlc.generator.po.IvrOrderExample;
+import com.zlc.generator.po.IvrOrder;
+import com.zlc.generator.po.IvrOrderExample;
 import java.util.List;
+
 import org.apache.ibatis.annotations.Param;
 
 public interface IvrOrderMapper {

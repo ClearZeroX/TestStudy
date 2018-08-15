@@ -1,4 +1,4 @@
-package com.channelsoft.zlc.generator.mapper;
+package com.zlc.generator.mapper;
 
 import com.channelsoft.zlc.po.ZnkfZdwh;
 import com.channelsoft.zlc.po.ZnkfZdwhExample;

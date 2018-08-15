@@ -24,8 +24,8 @@
     <!--  Java接口和实体类  -->
     <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
     <!-- mapper和po生成路径,需要手动指定-->
-    <targetMapperPackage>com.channelsoft.zlc.mapper</targetMapperPackage>
-    <targetModelPackage>com.channelsoft.zlc.po</targetModelPackage>
+    <targetMapperPackage>com.zlc.mapper</targetMapperPackage>
+    <targetModelPackage>com.zlc.po</targetModelPackage>
     <!--  XML生成路径,需要手动指定mapper路径  -->
     <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
     <targetXMLPackage>mapper</targetXMLPackage>

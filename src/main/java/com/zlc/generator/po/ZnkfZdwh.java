@@ -1,4 +1,4 @@
-package com.channelsoft.zlc.generator.po;
+package com.zlc.generator.po;
 
 import java.math.BigDecimal;
 import java.util.Date;
