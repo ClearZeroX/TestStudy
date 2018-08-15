@@ -1,0 +1,84 @@
+1、依赖
+    <dependency>
+      <groupId>org.mybatis.generator</groupId>
+      <artifactId>mybatis-generator-core</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+2、插件 :注意插件是个pluginManagement是同一个级别的,否则右侧没有显示
+    <plugins>
+      <plugin>
+        <groupId>org.mybatis.generator</groupId>
+        <artifactId>mybatis-generator-maven-plugin</artifactId>
+        <version>${mybatis-generator.version}</version>
+        <configuration>
+          <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+          <overwrite>true</overwrite>
+          <verbose>true</verbose>
+        </configuration>
+        <dependencies>
+          <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-version}</version>
+          </dependency>
+        </dependencies>
+      </plugin>
+    </plugins>
+3、配置文件
+    路径:
+        ${basedir}/src/main/resources/generator/generatorConfig.xml
+    内容:
+        <?xml version="1.0" encoding="UTF-8"?>
+        <!DOCTYPE generatorConfiguration
+                PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+                "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+        <generatorConfiguration>
+          <properties resource="application.properties"/>
+          <!-- MyBatis3Simple:只有少数内置查询,MyBatis3:标准模式,生成example辅助查询 -->
+          <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+            <property name="javaFileEncoding" value="UTF-8"/>
+            <!--指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号-->
+            <property name="beginningDelimiter" value="`"/>
+            <property name="endingDelimiter" value="`"/>
+            <commentGenerator>
+              <!--  关闭自动生成的注释  -->
+              <property name="suppressAllComments" value="true" />
+            </commentGenerator>
+            <jdbcConnection driverClass="org.gjt.mm.mysql.Driver"
+                            connectionURL="${jdbc.url}"
+                            userId="${jdbc.username}"
+                            password="${jdbc.password}">
+            </jdbcConnection>
+            <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+            <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetResourcesProject}"/>
+            <!-- MIXEDMAPPER,ANNOTATEDMAPPER,XMLMAPPER -->
+            <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
+            <!-- ivr_order -->
+            <!--<table tableName="ivr_order" >
+              <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            </table>-->
+            <!--多次执行会覆盖掉原来生成的java代码,xml中代码不会覆盖-->
+            <table tableName="znkf_zdwh" >
+              <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+            </table>
+          </context>
+        </generatorConfiguration>
+
+4、路径配置在pom中或者直接下载generatorConfig.xml下
+    pom中:
+        <mysql-version>5.1.38</mysql-version>
+        <mybatis-version>3.4.1</mybatis-version>
+        <mybatis-generator.version>1.3.2</mybatis-generator.version>
+        <!--  Java接口和实体类  -->
+        <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
+        <!-- mapper和po生成路径,需要手动指定-->
+        <targetMapperPackage>com.channelsoft.zlc.mapper</targetMapperPackage>
+        <targetModelPackage>com.channelsoft.zlc.po</targetModelPackage>
+        <!--  XML生成路径,需要手动指定mapper路径  -->
+        <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
+        <targetXMLPackage>mapper</targetXMLPackage>
+
+5、使用注意:
+    重复命令会覆盖java代码,但是不会覆盖xml代码
+
+6、相关方法注意:

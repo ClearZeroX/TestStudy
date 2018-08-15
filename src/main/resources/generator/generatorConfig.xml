@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  ~ The MIT License (MIT)
+  ~
+  ~ Copyright (c) 2014 abel533@gmail.com
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in
+  ~ all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  ~ THE SOFTWARE.
+  -->
+
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+  <properties resource="application.properties"/>
+  <!-- MyBatis3Simple:只有少数内置查询,MyBatis3:标准模式,生成example辅助查询 -->
+  <context id="Mysql" targetRuntime="MyBatis3" defaultModelType="flat">
+    <property name="javaFileEncoding" value="UTF-8"/>
+    <!--指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号-->
+    <property name="beginningDelimiter" value="`"/>
+    <property name="endingDelimiter" value="`"/>
+    <commentGenerator>
+      <!--  关闭自动生成的注释  -->
+      <property name="suppressAllComments" value="true" />
+    </commentGenerator>
+
+    <jdbcConnection driverClass="org.gjt.mm.mysql.Driver"
+                    connectionURL="${jdbc.url}"
+                    userId="${jdbc.username}"
+                    password="${jdbc.password}">
+    </jdbcConnection>
+
+    <javaModelGenerator targetPackage="${targetModelPackage}" targetProject="${targetJavaProject}"/>
+
+    <sqlMapGenerator targetPackage="${targetXMLPackage}"  targetProject="${targetResourcesProject}"/>
+    <!-- MIXEDMAPPER,ANNOTATEDMAPPER,XMLMAPPER -->
+    <javaClientGenerator targetPackage="${targetMapperPackage}" targetProject="${targetJavaProject}" type="XMLMAPPER" />
+    <!-- ivr_order -->
+    <!--<table tableName="ivr_order" >
+      <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>-->
+    <!--多次执行会覆盖掉原来生成的java代码,xml中代码不会覆盖-->
+    <table tableName="znkf_zdwh" >
+      <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+    </table>
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,1411 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.channelsoft.zlc.mapper.ZnkfZdwhMapper" >
+  <resultMap id="BaseResultMap" type="com.channelsoft.zlc.po.ZnkfZdwh" >
+    <id column="id" property="id" jdbcType="BIGINT" />
+    <result column="ywid" property="ywid" jdbcType="VARCHAR" />
+    <result column="ywcjlx" property="ywcjlx" jdbcType="VARCHAR" />
+    <result column="ywlxdm" property="ywlxdm" jdbcType="VARCHAR" />
+    <result column="rwbh" property="rwbh" jdbcType="VARCHAR" />
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="sex" property="sex" jdbcType="VARCHAR" />
+    <result column="telno1" property="telno1" jdbcType="VARCHAR" />
+    <result column="telno2" property="telno2" jdbcType="VARCHAR" />
+    <result column="call_end_date" property="callEndDate" jdbcType="VARCHAR" />
+    <result column="expand1" property="expand1" jdbcType="VARCHAR" />
+    <result column="expand2" property="expand2" jdbcType="VARCHAR" />
+    <result column="modified_post_address" property="modifiedPostAddress" jdbcType="VARCHAR" />
+    <result column="activity_type" property="activityType" jdbcType="VARCHAR" />
+    <result column="data_dt" property="dataDt" jdbcType="VARCHAR" />
+    <result column="followup_days" property="followupDays" jdbcType="INTEGER" />
+    <result column="cust_no" property="custNo" jdbcType="VARCHAR" />
+    <result column="is_managed" property="isManaged" jdbcType="VARCHAR" />
+    <result column="org_id" property="orgId" jdbcType="VARCHAR" />
+    <result column="age" property="age" jdbcType="VARCHAR" />
+    <result column="work_place" property="workPlace" jdbcType="VARCHAR" />
+    <result column="occupation" property="occupation" jdbcType="VARCHAR" />
+    <result column="exp_product_code" property="expProductCode" jdbcType="VARCHAR" />
+    <result column="exp_product_name" property="expProductName" jdbcType="VARCHAR" />
+    <result column="exp_product_amt" property="expProductAmt" jdbcType="DECIMAL" />
+    <result column="expire_date" property="expireDate" jdbcType="VARCHAR" />
+    <result column="exp_prod_term" property="expProdTerm" jdbcType="VARCHAR" />
+    <result column="exp_prod_yields" property="expProdYields" jdbcType="DECIMAL" />
+    <result column="exp_prod_attribute" property="expProdAttribute" jdbcType="VARCHAR" />
+    <result column="exp_prod_risklevel" property="expProdRisklevel" jdbcType="VARCHAR" />
+    <result column="card_id" property="cardId" jdbcType="VARCHAR" />
+    <result column="aum_bal" property="aumBal" jdbcType="DECIMAL" />
+    <result column="aum_90" property="aum90" jdbcType="DECIMAL" />
+    <result column="reserve_stat" property="reserveStat" jdbcType="VARCHAR" />
+    <result column="reserve_fail_reason" property="reserveFailReason" jdbcType="VARCHAR" />
+    <result column="exp_prod_sum" property="expProdSum" jdbcType="DECIMAL" />
+    <result column="total_sum" property="totalSum" jdbcType="DECIMAL" />
+    <result column="ivr_result" property="ivrResult" jdbcType="VARCHAR" />
+    <result column="guip_result" property="guipResult" jdbcType="VARCHAR" />
+    <result column="total_result" property="totalResult" jdbcType="VARCHAR" />
+    <result column="fail_count" property="failCount" jdbcType="INTEGER" />
+    <result column="insert_date" property="insertDate" jdbcType="TIMESTAMP" />
+    <result column="update_date" property="updateDate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+    <result column="call_start_time" property="callStartTime" jdbcType="TIMESTAMP" />
+    <result column="call_spend_time" property="callSpendTime" jdbcType="DECIMAL" />
+    <result column="call_ivr_spend_time" property="callIvrSpendTime" jdbcType="DECIMAL" />
+    <result column="call_stop_time" property="callStopTime" jdbcType="TIMESTAMP" />
+    <result column="call_record_id" property="callRecordId" jdbcType="VARCHAR" />
+    <result column="home_add" property="homeAdd" jdbcType="VARCHAR" />
+    <result column="sjyh_jqhm" property="sjyhJqhm" jdbcType="VARCHAR" />
+    <result column="yxt_num" property="yxtNum" jdbcType="VARCHAR" />
+    <result column="pch" property="pch" jdbcType="VARCHAR" />
+    <result column="sz_org_code" property="szOrgCode" jdbcType="VARCHAR" />
+    <result column="sz_org_name" property="szOrgName" jdbcType="VARCHAR" />
+    <result column="manager_id" property="managerId" jdbcType="VARCHAR" />
+    <result column="oper_type" property="operType" jdbcType="VARCHAR" />
+    <result column="remark" property="remark" jdbcType="VARCHAR" />
+    <result column="dzqd_zc_num" property="dzqdZcNum" jdbcType="VARCHAR" />
+    <result column="id_type" property="idType" jdbcType="VARCHAR" />
+    <result column="id_no" property="idNo" jdbcType="VARCHAR" />
+    <result column="colunm1" property="colunm1" jdbcType="VARCHAR" />
+    <result column="colunm2" property="colunm2" jdbcType="VARCHAR" />
+    <result column="colunm3" property="colunm3" jdbcType="VARCHAR" />
+    <result column="colunm4" property="colunm4" jdbcType="VARCHAR" />
+    <result column="colunm5" property="colunm5" jdbcType="VARCHAR" />
+    <result column="colunm6" property="colunm6" jdbcType="VARCHAR" />
+    <result column="colunm7" property="colunm7" jdbcType="VARCHAR" />
+    <result column="colunm8" property="colunm8" jdbcType="VARCHAR" />
+    <result column="colunm9" property="colunm9" jdbcType="VARCHAR" />
+    <result column="colunm10" property="colunm10" jdbcType="VARCHAR" />
+    <result column="colunm11" property="colunm11" jdbcType="VARCHAR" />
+    <result column="colunm12" property="colunm12" jdbcType="VARCHAR" />
+    <result column="colunm13" property="colunm13" jdbcType="VARCHAR" />
+    <result column="colunm14" property="colunm14" jdbcType="VARCHAR" />
+    <result column="colunm15" property="colunm15" jdbcType="VARCHAR" />
+    <result column="colunm16" property="colunm16" jdbcType="VARCHAR" />
+    <result column="colunm17" property="colunm17" jdbcType="VARCHAR" />
+    <result column="colunm18" property="colunm18" jdbcType="VARCHAR" />
+    <result column="colunm19" property="colunm19" jdbcType="VARCHAR" />
+    <result column="colunm20" property="colunm20" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, ywid, ywcjlx, ywlxdm, rwbh, name, sex, telno1, telno2, call_end_date, expand1, 
+    expand2, modified_post_address, activity_type, data_dt, followup_days, cust_no, is_managed, 
+    org_id, age, work_place, occupation, exp_product_code, exp_product_name, exp_product_amt, 
+    expire_date, exp_prod_term, exp_prod_yields, exp_prod_attribute, exp_prod_risklevel, 
+    card_id, aum_bal, aum_90, reserve_stat, reserve_fail_reason, exp_prod_sum, total_sum, 
+    ivr_result, guip_result, total_result, fail_count, insert_date, update_date, status, 
+    call_start_time, call_spend_time, call_ivr_spend_time, call_stop_time, call_record_id, 
+    home_add, sjyh_jqhm, yxt_num, pch, sz_org_code, sz_org_name, manager_id, oper_type, 
+    remark, dzqd_zc_num, id_type, id_no, colunm1, colunm2, colunm3, colunm4, colunm5, 
+    colunm6, colunm7, colunm8, colunm9, colunm10, colunm11, colunm12, colunm13, colunm14, 
+    colunm15, colunm16, colunm17, colunm18, colunm19, colunm20
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.channelsoft.zlc.po.ZnkfZdwhExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from znkf_zdwh
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Long" >
+    select 
+    <include refid="Base_Column_List" />
+    from znkf_zdwh
+    where id = #{id,jdbcType=BIGINT}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Long" >
+    delete from znkf_zdwh
+    where id = #{id,jdbcType=BIGINT}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.channelsoft.zlc.po.ZnkfZdwhExample" >
+    delete from znkf_zdwh
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.channelsoft.zlc.po.ZnkfZdwh" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into znkf_zdwh (ywid, ywcjlx, ywlxdm, 
+      rwbh, name, sex, telno1, 
+      telno2, call_end_date, expand1, 
+      expand2, modified_post_address, activity_type, 
+      data_dt, followup_days, cust_no, 
+      is_managed, org_id, age, 
+      work_place, occupation, exp_product_code, 
+      exp_product_name, exp_product_amt, expire_date, 
+      exp_prod_term, exp_prod_yields, exp_prod_attribute, 
+      exp_prod_risklevel, card_id, aum_bal, 
+      aum_90, reserve_stat, reserve_fail_reason, 
+      exp_prod_sum, total_sum, ivr_result, 
+      guip_result, total_result, fail_count, 
+      insert_date, update_date, status, 
+      call_start_time, call_spend_time, call_ivr_spend_time, 
+      call_stop_time, call_record_id, home_add, 
+      sjyh_jqhm, yxt_num, pch, 
+      sz_org_code, sz_org_name, manager_id, 
+      oper_type, remark, dzqd_zc_num, 
+      id_type, id_no, colunm1, 
+      colunm2, colunm3, colunm4, 
+      colunm5, colunm6, colunm7, 
+      colunm8, colunm9, colunm10, 
+      colunm11, colunm12, colunm13, 
+      colunm14, colunm15, colunm16, 
+      colunm17, colunm18, colunm19, 
+      colunm20)
+    values (#{ywid,jdbcType=VARCHAR}, #{ywcjlx,jdbcType=VARCHAR}, #{ywlxdm,jdbcType=VARCHAR}, 
+      #{rwbh,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{telno1,jdbcType=VARCHAR}, 
+      #{telno2,jdbcType=VARCHAR}, #{callEndDate,jdbcType=VARCHAR}, #{expand1,jdbcType=VARCHAR}, 
+      #{expand2,jdbcType=VARCHAR}, #{modifiedPostAddress,jdbcType=VARCHAR}, #{activityType,jdbcType=VARCHAR}, 
+      #{dataDt,jdbcType=VARCHAR}, #{followupDays,jdbcType=INTEGER}, #{custNo,jdbcType=VARCHAR}, 
+      #{isManaged,jdbcType=VARCHAR}, #{orgId,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, 
+      #{workPlace,jdbcType=VARCHAR}, #{occupation,jdbcType=VARCHAR}, #{expProductCode,jdbcType=VARCHAR}, 
+      #{expProductName,jdbcType=VARCHAR}, #{expProductAmt,jdbcType=DECIMAL}, #{expireDate,jdbcType=VARCHAR}, 
+      #{expProdTerm,jdbcType=VARCHAR}, #{expProdYields,jdbcType=DECIMAL}, #{expProdAttribute,jdbcType=VARCHAR}, 
+      #{expProdRisklevel,jdbcType=VARCHAR}, #{cardId,jdbcType=VARCHAR}, #{aumBal,jdbcType=DECIMAL}, 
+      #{aum90,jdbcType=DECIMAL}, #{reserveStat,jdbcType=VARCHAR}, #{reserveFailReason,jdbcType=VARCHAR}, 
+      #{expProdSum,jdbcType=DECIMAL}, #{totalSum,jdbcType=DECIMAL}, #{ivrResult,jdbcType=VARCHAR}, 
+      #{guipResult,jdbcType=VARCHAR}, #{totalResult,jdbcType=VARCHAR}, #{failCount,jdbcType=INTEGER}, 
+      #{insertDate,jdbcType=TIMESTAMP}, #{updateDate,jdbcType=TIMESTAMP}, #{status,jdbcType=VARCHAR}, 
+      #{callStartTime,jdbcType=TIMESTAMP}, #{callSpendTime,jdbcType=DECIMAL}, #{callIvrSpendTime,jdbcType=DECIMAL}, 
+      #{callStopTime,jdbcType=TIMESTAMP}, #{callRecordId,jdbcType=VARCHAR}, #{homeAdd,jdbcType=VARCHAR}, 
+      #{sjyhJqhm,jdbcType=VARCHAR}, #{yxtNum,jdbcType=VARCHAR}, #{pch,jdbcType=VARCHAR}, 
+      #{szOrgCode,jdbcType=VARCHAR}, #{szOrgName,jdbcType=VARCHAR}, #{managerId,jdbcType=VARCHAR}, 
+      #{operType,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{dzqdZcNum,jdbcType=VARCHAR}, 
+      #{idType,jdbcType=VARCHAR}, #{idNo,jdbcType=VARCHAR}, #{colunm1,jdbcType=VARCHAR}, 
+      #{colunm2,jdbcType=VARCHAR}, #{colunm3,jdbcType=VARCHAR}, #{colunm4,jdbcType=VARCHAR}, 
+      #{colunm5,jdbcType=VARCHAR}, #{colunm6,jdbcType=VARCHAR}, #{colunm7,jdbcType=VARCHAR}, 
+      #{colunm8,jdbcType=VARCHAR}, #{colunm9,jdbcType=VARCHAR}, #{colunm10,jdbcType=VARCHAR}, 
+      #{colunm11,jdbcType=VARCHAR}, #{colunm12,jdbcType=VARCHAR}, #{colunm13,jdbcType=VARCHAR}, 
+      #{colunm14,jdbcType=VARCHAR}, #{colunm15,jdbcType=VARCHAR}, #{colunm16,jdbcType=VARCHAR}, 
+      #{colunm17,jdbcType=VARCHAR}, #{colunm18,jdbcType=VARCHAR}, #{colunm19,jdbcType=VARCHAR}, 
+      #{colunm20,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.channelsoft.zlc.po.ZnkfZdwh" >
+    <selectKey resultType="java.lang.Long" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into znkf_zdwh
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="ywid != null" >
+        ywid,
+      </if>
+      <if test="ywcjlx != null" >
+        ywcjlx,
+      </if>
+      <if test="ywlxdm != null" >
+        ywlxdm,
+      </if>
+      <if test="rwbh != null" >
+        rwbh,
+      </if>
+      <if test="name != null" >
+        name,
+      </if>
+      <if test="sex != null" >
+        sex,
+      </if>
+      <if test="telno1 != null" >
+        telno1,
+      </if>
+      <if test="telno2 != null" >
+        telno2,
+      </if>
+      <if test="callEndDate != null" >
+        call_end_date,
+      </if>
+      <if test="expand1 != null" >
+        expand1,
+      </if>
+      <if test="expand2 != null" >
+        expand2,
+      </if>
+      <if test="modifiedPostAddress != null" >
+        modified_post_address,
+      </if>
+      <if test="activityType != null" >
+        activity_type,
+      </if>
+      <if test="dataDt != null" >
+        data_dt,
+      </if>
+      <if test="followupDays != null" >
+        followup_days,
+      </if>
+      <if test="custNo != null" >
+        cust_no,
+      </if>
+      <if test="isManaged != null" >
+        is_managed,
+      </if>
+      <if test="orgId != null" >
+        org_id,
+      </if>
+      <if test="age != null" >
+        age,
+      </if>
+      <if test="workPlace != null" >
+        work_place,
+      </if>
+      <if test="occupation != null" >
+        occupation,
+      </if>
+      <if test="expProductCode != null" >
+        exp_product_code,
+      </if>
+      <if test="expProductName != null" >
+        exp_product_name,
+      </if>
+      <if test="expProductAmt != null" >
+        exp_product_amt,
+      </if>
+      <if test="expireDate != null" >
+        expire_date,
+      </if>
+      <if test="expProdTerm != null" >
+        exp_prod_term,
+      </if>
+      <if test="expProdYields != null" >
+        exp_prod_yields,
+      </if>
+      <if test="expProdAttribute != null" >
+        exp_prod_attribute,
+      </if>
+      <if test="expProdRisklevel != null" >
+        exp_prod_risklevel,
+      </if>
+      <if test="cardId != null" >
+        card_id,
+      </if>
+      <if test="aumBal != null" >
+        aum_bal,
+      </if>
+      <if test="aum90 != null" >
+        aum_90,
+      </if>
+      <if test="reserveStat != null" >
+        reserve_stat,
+      </if>
+      <if test="reserveFailReason != null" >
+        reserve_fail_reason,
+      </if>
+      <if test="expProdSum != null" >
+        exp_prod_sum,
+      </if>
+      <if test="totalSum != null" >
+        total_sum,
+      </if>
+      <if test="ivrResult != null" >
+        ivr_result,
+      </if>
+      <if test="guipResult != null" >
+        guip_result,
+      </if>
+      <if test="totalResult != null" >
+        total_result,
+      </if>
+      <if test="failCount != null" >
+        fail_count,
+      </if>
+      <if test="insertDate != null" >
+        insert_date,
+      </if>
+      <if test="updateDate != null" >
+        update_date,
+      </if>
+      <if test="status != null" >
+        status,
+      </if>
+      <if test="callStartTime != null" >
+        call_start_time,
+      </if>
+      <if test="callSpendTime != null" >
+        call_spend_time,
+      </if>
+      <if test="callIvrSpendTime != null" >
+        call_ivr_spend_time,
+      </if>
+      <if test="callStopTime != null" >
+        call_stop_time,
+      </if>
+      <if test="callRecordId != null" >
+        call_record_id,
+      </if>
+      <if test="homeAdd != null" >
+        home_add,
+      </if>
+      <if test="sjyhJqhm != null" >
+        sjyh_jqhm,
+      </if>
+      <if test="yxtNum != null" >
+        yxt_num,
+      </if>
+      <if test="pch != null" >
+        pch,
+      </if>
+      <if test="szOrgCode != null" >
+        sz_org_code,
+      </if>
+      <if test="szOrgName != null" >
+        sz_org_name,
+      </if>
+      <if test="managerId != null" >
+        manager_id,
+      </if>
+      <if test="operType != null" >
+        oper_type,
+      </if>
+      <if test="remark != null" >
+        remark,
+      </if>
+      <if test="dzqdZcNum != null" >
+        dzqd_zc_num,
+      </if>
+      <if test="idType != null" >
+        id_type,
+      </if>
+      <if test="idNo != null" >
+        id_no,
+      </if>
+      <if test="colunm1 != null" >
+        colunm1,
+      </if>
+      <if test="colunm2 != null" >
+        colunm2,
+      </if>
+      <if test="colunm3 != null" >
+        colunm3,
+      </if>
+      <if test="colunm4 != null" >
+        colunm4,
+      </if>
+      <if test="colunm5 != null" >
+        colunm5,
+      </if>
+      <if test="colunm6 != null" >
+        colunm6,
+      </if>
+      <if test="colunm7 != null" >
+        colunm7,
+      </if>
+      <if test="colunm8 != null" >
+        colunm8,
+      </if>
+      <if test="colunm9 != null" >
+        colunm9,
+      </if>
+      <if test="colunm10 != null" >
+        colunm10,
+      </if>
+      <if test="colunm11 != null" >
+        colunm11,
+      </if>
+      <if test="colunm12 != null" >
+        colunm12,
+      </if>
+      <if test="colunm13 != null" >
+        colunm13,
+      </if>
+      <if test="colunm14 != null" >
+        colunm14,
+      </if>
+      <if test="colunm15 != null" >
+        colunm15,
+      </if>
+      <if test="colunm16 != null" >
+        colunm16,
+      </if>
+      <if test="colunm17 != null" >
+        colunm17,
+      </if>
+      <if test="colunm18 != null" >
+        colunm18,
+      </if>
+      <if test="colunm19 != null" >
+        colunm19,
+      </if>
+      <if test="colunm20 != null" >
+        colunm20,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="ywid != null" >
+        #{ywid,jdbcType=VARCHAR},
+      </if>
+      <if test="ywcjlx != null" >
+        #{ywcjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="ywlxdm != null" >
+        #{ywlxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="rwbh != null" >
+        #{rwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="telno1 != null" >
+        #{telno1,jdbcType=VARCHAR},
+      </if>
+      <if test="telno2 != null" >
+        #{telno2,jdbcType=VARCHAR},
+      </if>
+      <if test="callEndDate != null" >
+        #{callEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="expand1 != null" >
+        #{expand1,jdbcType=VARCHAR},
+      </if>
+      <if test="expand2 != null" >
+        #{expand2,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedPostAddress != null" >
+        #{modifiedPostAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="activityType != null" >
+        #{activityType,jdbcType=VARCHAR},
+      </if>
+      <if test="dataDt != null" >
+        #{dataDt,jdbcType=VARCHAR},
+      </if>
+      <if test="followupDays != null" >
+        #{followupDays,jdbcType=INTEGER},
+      </if>
+      <if test="custNo != null" >
+        #{custNo,jdbcType=VARCHAR},
+      </if>
+      <if test="isManaged != null" >
+        #{isManaged,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        #{orgId,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="workPlace != null" >
+        #{workPlace,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null" >
+        #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductCode != null" >
+        #{expProductCode,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductName != null" >
+        #{expProductName,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductAmt != null" >
+        #{expProductAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="expireDate != null" >
+        #{expireDate,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdTerm != null" >
+        #{expProdTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdYields != null" >
+        #{expProdYields,jdbcType=DECIMAL},
+      </if>
+      <if test="expProdAttribute != null" >
+        #{expProdAttribute,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdRisklevel != null" >
+        #{expProdRisklevel,jdbcType=VARCHAR},
+      </if>
+      <if test="cardId != null" >
+        #{cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="aumBal != null" >
+        #{aumBal,jdbcType=DECIMAL},
+      </if>
+      <if test="aum90 != null" >
+        #{aum90,jdbcType=DECIMAL},
+      </if>
+      <if test="reserveStat != null" >
+        #{reserveStat,jdbcType=VARCHAR},
+      </if>
+      <if test="reserveFailReason != null" >
+        #{reserveFailReason,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdSum != null" >
+        #{expProdSum,jdbcType=DECIMAL},
+      </if>
+      <if test="totalSum != null" >
+        #{totalSum,jdbcType=DECIMAL},
+      </if>
+      <if test="ivrResult != null" >
+        #{ivrResult,jdbcType=VARCHAR},
+      </if>
+      <if test="guipResult != null" >
+        #{guipResult,jdbcType=VARCHAR},
+      </if>
+      <if test="totalResult != null" >
+        #{totalResult,jdbcType=VARCHAR},
+      </if>
+      <if test="failCount != null" >
+        #{failCount,jdbcType=INTEGER},
+      </if>
+      <if test="insertDate != null" >
+        #{insertDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="callStartTime != null" >
+        #{callStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callSpendTime != null" >
+        #{callSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="callIvrSpendTime != null" >
+        #{callIvrSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="callStopTime != null" >
+        #{callStopTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callRecordId != null" >
+        #{callRecordId,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAdd != null" >
+        #{homeAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="sjyhJqhm != null" >
+        #{sjyhJqhm,jdbcType=VARCHAR},
+      </if>
+      <if test="yxtNum != null" >
+        #{yxtNum,jdbcType=VARCHAR},
+      </if>
+      <if test="pch != null" >
+        #{pch,jdbcType=VARCHAR},
+      </if>
+      <if test="szOrgCode != null" >
+        #{szOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="szOrgName != null" >
+        #{szOrgName,jdbcType=VARCHAR},
+      </if>
+      <if test="managerId != null" >
+        #{managerId,jdbcType=VARCHAR},
+      </if>
+      <if test="operType != null" >
+        #{operType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dzqdZcNum != null" >
+        #{dzqdZcNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null" >
+        #{idType,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null" >
+        #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm1 != null" >
+        #{colunm1,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm2 != null" >
+        #{colunm2,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm3 != null" >
+        #{colunm3,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm4 != null" >
+        #{colunm4,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm5 != null" >
+        #{colunm5,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm6 != null" >
+        #{colunm6,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm7 != null" >
+        #{colunm7,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm8 != null" >
+        #{colunm8,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm9 != null" >
+        #{colunm9,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm10 != null" >
+        #{colunm10,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm11 != null" >
+        #{colunm11,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm12 != null" >
+        #{colunm12,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm13 != null" >
+        #{colunm13,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm14 != null" >
+        #{colunm14,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm15 != null" >
+        #{colunm15,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm16 != null" >
+        #{colunm16,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm17 != null" >
+        #{colunm17,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm18 != null" >
+        #{colunm18,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm19 != null" >
+        #{colunm19,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm20 != null" >
+        #{colunm20,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.channelsoft.zlc.po.ZnkfZdwhExample" resultType="java.lang.Integer" >
+    select count(*) from znkf_zdwh
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update znkf_zdwh
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=BIGINT},
+      </if>
+      <if test="record.ywid != null" >
+        ywid = #{record.ywid,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ywcjlx != null" >
+        ywcjlx = #{record.ywcjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="record.ywlxdm != null" >
+        ywlxdm = #{record.ywlxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="record.rwbh != null" >
+        rwbh = #{record.rwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="record.name != null" >
+        name = #{record.name,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sex != null" >
+        sex = #{record.sex,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telno1 != null" >
+        telno1 = #{record.telno1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.telno2 != null" >
+        telno2 = #{record.telno2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callEndDate != null" >
+        call_end_date = #{record.callEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expand1 != null" >
+        expand1 = #{record.expand1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expand2 != null" >
+        expand2 = #{record.expand2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.modifiedPostAddress != null" >
+        modified_post_address = #{record.modifiedPostAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="record.activityType != null" >
+        activity_type = #{record.activityType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dataDt != null" >
+        data_dt = #{record.dataDt,jdbcType=VARCHAR},
+      </if>
+      <if test="record.followupDays != null" >
+        followup_days = #{record.followupDays,jdbcType=INTEGER},
+      </if>
+      <if test="record.custNo != null" >
+        cust_no = #{record.custNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isManaged != null" >
+        is_managed = #{record.isManaged,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orgId != null" >
+        org_id = #{record.orgId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.age != null" >
+        age = #{record.age,jdbcType=VARCHAR},
+      </if>
+      <if test="record.workPlace != null" >
+        work_place = #{record.workPlace,jdbcType=VARCHAR},
+      </if>
+      <if test="record.occupation != null" >
+        occupation = #{record.occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProductCode != null" >
+        exp_product_code = #{record.expProductCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProductName != null" >
+        exp_product_name = #{record.expProductName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProductAmt != null" >
+        exp_product_amt = #{record.expProductAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="record.expireDate != null" >
+        expire_date = #{record.expireDate,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProdTerm != null" >
+        exp_prod_term = #{record.expProdTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProdYields != null" >
+        exp_prod_yields = #{record.expProdYields,jdbcType=DECIMAL},
+      </if>
+      <if test="record.expProdAttribute != null" >
+        exp_prod_attribute = #{record.expProdAttribute,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProdRisklevel != null" >
+        exp_prod_risklevel = #{record.expProdRisklevel,jdbcType=VARCHAR},
+      </if>
+      <if test="record.cardId != null" >
+        card_id = #{record.cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.aumBal != null" >
+        aum_bal = #{record.aumBal,jdbcType=DECIMAL},
+      </if>
+      <if test="record.aum90 != null" >
+        aum_90 = #{record.aum90,jdbcType=DECIMAL},
+      </if>
+      <if test="record.reserveStat != null" >
+        reserve_stat = #{record.reserveStat,jdbcType=VARCHAR},
+      </if>
+      <if test="record.reserveFailReason != null" >
+        reserve_fail_reason = #{record.reserveFailReason,jdbcType=VARCHAR},
+      </if>
+      <if test="record.expProdSum != null" >
+        exp_prod_sum = #{record.expProdSum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.totalSum != null" >
+        total_sum = #{record.totalSum,jdbcType=DECIMAL},
+      </if>
+      <if test="record.ivrResult != null" >
+        ivr_result = #{record.ivrResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.guipResult != null" >
+        guip_result = #{record.guipResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.totalResult != null" >
+        total_result = #{record.totalResult,jdbcType=VARCHAR},
+      </if>
+      <if test="record.failCount != null" >
+        fail_count = #{record.failCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.insertDate != null" >
+        insert_date = #{record.insertDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateDate != null" >
+        update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.status != null" >
+        status = #{record.status,jdbcType=VARCHAR},
+      </if>
+      <if test="record.callStartTime != null" >
+        call_start_time = #{record.callStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.callSpendTime != null" >
+        call_spend_time = #{record.callSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="record.callIvrSpendTime != null" >
+        call_ivr_spend_time = #{record.callIvrSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="record.callStopTime != null" >
+        call_stop_time = #{record.callStopTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.callRecordId != null" >
+        call_record_id = #{record.callRecordId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.homeAdd != null" >
+        home_add = #{record.homeAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sjyhJqhm != null" >
+        sjyh_jqhm = #{record.sjyhJqhm,jdbcType=VARCHAR},
+      </if>
+      <if test="record.yxtNum != null" >
+        yxt_num = #{record.yxtNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.pch != null" >
+        pch = #{record.pch,jdbcType=VARCHAR},
+      </if>
+      <if test="record.szOrgCode != null" >
+        sz_org_code = #{record.szOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.szOrgName != null" >
+        sz_org_name = #{record.szOrgName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.managerId != null" >
+        manager_id = #{record.managerId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.operType != null" >
+        oper_type = #{record.operType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null" >
+        remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dzqdZcNum != null" >
+        dzqd_zc_num = #{record.dzqdZcNum,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idType != null" >
+        id_type = #{record.idType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idNo != null" >
+        id_no = #{record.idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm1 != null" >
+        colunm1 = #{record.colunm1,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm2 != null" >
+        colunm2 = #{record.colunm2,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm3 != null" >
+        colunm3 = #{record.colunm3,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm4 != null" >
+        colunm4 = #{record.colunm4,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm5 != null" >
+        colunm5 = #{record.colunm5,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm6 != null" >
+        colunm6 = #{record.colunm6,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm7 != null" >
+        colunm7 = #{record.colunm7,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm8 != null" >
+        colunm8 = #{record.colunm8,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm9 != null" >
+        colunm9 = #{record.colunm9,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm10 != null" >
+        colunm10 = #{record.colunm10,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm11 != null" >
+        colunm11 = #{record.colunm11,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm12 != null" >
+        colunm12 = #{record.colunm12,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm13 != null" >
+        colunm13 = #{record.colunm13,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm14 != null" >
+        colunm14 = #{record.colunm14,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm15 != null" >
+        colunm15 = #{record.colunm15,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm16 != null" >
+        colunm16 = #{record.colunm16,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm17 != null" >
+        colunm17 = #{record.colunm17,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm18 != null" >
+        colunm18 = #{record.colunm18,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm19 != null" >
+        colunm19 = #{record.colunm19,jdbcType=VARCHAR},
+      </if>
+      <if test="record.colunm20 != null" >
+        colunm20 = #{record.colunm20,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update znkf_zdwh
+    set id = #{record.id,jdbcType=BIGINT},
+      ywid = #{record.ywid,jdbcType=VARCHAR},
+      ywcjlx = #{record.ywcjlx,jdbcType=VARCHAR},
+      ywlxdm = #{record.ywlxdm,jdbcType=VARCHAR},
+      rwbh = #{record.rwbh,jdbcType=VARCHAR},
+      name = #{record.name,jdbcType=VARCHAR},
+      sex = #{record.sex,jdbcType=VARCHAR},
+      telno1 = #{record.telno1,jdbcType=VARCHAR},
+      telno2 = #{record.telno2,jdbcType=VARCHAR},
+      call_end_date = #{record.callEndDate,jdbcType=VARCHAR},
+      expand1 = #{record.expand1,jdbcType=VARCHAR},
+      expand2 = #{record.expand2,jdbcType=VARCHAR},
+      modified_post_address = #{record.modifiedPostAddress,jdbcType=VARCHAR},
+      activity_type = #{record.activityType,jdbcType=VARCHAR},
+      data_dt = #{record.dataDt,jdbcType=VARCHAR},
+      followup_days = #{record.followupDays,jdbcType=INTEGER},
+      cust_no = #{record.custNo,jdbcType=VARCHAR},
+      is_managed = #{record.isManaged,jdbcType=VARCHAR},
+      org_id = #{record.orgId,jdbcType=VARCHAR},
+      age = #{record.age,jdbcType=VARCHAR},
+      work_place = #{record.workPlace,jdbcType=VARCHAR},
+      occupation = #{record.occupation,jdbcType=VARCHAR},
+      exp_product_code = #{record.expProductCode,jdbcType=VARCHAR},
+      exp_product_name = #{record.expProductName,jdbcType=VARCHAR},
+      exp_product_amt = #{record.expProductAmt,jdbcType=DECIMAL},
+      expire_date = #{record.expireDate,jdbcType=VARCHAR},
+      exp_prod_term = #{record.expProdTerm,jdbcType=VARCHAR},
+      exp_prod_yields = #{record.expProdYields,jdbcType=DECIMAL},
+      exp_prod_attribute = #{record.expProdAttribute,jdbcType=VARCHAR},
+      exp_prod_risklevel = #{record.expProdRisklevel,jdbcType=VARCHAR},
+      card_id = #{record.cardId,jdbcType=VARCHAR},
+      aum_bal = #{record.aumBal,jdbcType=DECIMAL},
+      aum_90 = #{record.aum90,jdbcType=DECIMAL},
+      reserve_stat = #{record.reserveStat,jdbcType=VARCHAR},
+      reserve_fail_reason = #{record.reserveFailReason,jdbcType=VARCHAR},
+      exp_prod_sum = #{record.expProdSum,jdbcType=DECIMAL},
+      total_sum = #{record.totalSum,jdbcType=DECIMAL},
+      ivr_result = #{record.ivrResult,jdbcType=VARCHAR},
+      guip_result = #{record.guipResult,jdbcType=VARCHAR},
+      total_result = #{record.totalResult,jdbcType=VARCHAR},
+      fail_count = #{record.failCount,jdbcType=INTEGER},
+      insert_date = #{record.insertDate,jdbcType=TIMESTAMP},
+      update_date = #{record.updateDate,jdbcType=TIMESTAMP},
+      status = #{record.status,jdbcType=VARCHAR},
+      call_start_time = #{record.callStartTime,jdbcType=TIMESTAMP},
+      call_spend_time = #{record.callSpendTime,jdbcType=DECIMAL},
+      call_ivr_spend_time = #{record.callIvrSpendTime,jdbcType=DECIMAL},
+      call_stop_time = #{record.callStopTime,jdbcType=TIMESTAMP},
+      call_record_id = #{record.callRecordId,jdbcType=VARCHAR},
+      home_add = #{record.homeAdd,jdbcType=VARCHAR},
+      sjyh_jqhm = #{record.sjyhJqhm,jdbcType=VARCHAR},
+      yxt_num = #{record.yxtNum,jdbcType=VARCHAR},
+      pch = #{record.pch,jdbcType=VARCHAR},
+      sz_org_code = #{record.szOrgCode,jdbcType=VARCHAR},
+      sz_org_name = #{record.szOrgName,jdbcType=VARCHAR},
+      manager_id = #{record.managerId,jdbcType=VARCHAR},
+      oper_type = #{record.operType,jdbcType=VARCHAR},
+      remark = #{record.remark,jdbcType=VARCHAR},
+      dzqd_zc_num = #{record.dzqdZcNum,jdbcType=VARCHAR},
+      id_type = #{record.idType,jdbcType=VARCHAR},
+      id_no = #{record.idNo,jdbcType=VARCHAR},
+      colunm1 = #{record.colunm1,jdbcType=VARCHAR},
+      colunm2 = #{record.colunm2,jdbcType=VARCHAR},
+      colunm3 = #{record.colunm3,jdbcType=VARCHAR},
+      colunm4 = #{record.colunm4,jdbcType=VARCHAR},
+      colunm5 = #{record.colunm5,jdbcType=VARCHAR},
+      colunm6 = #{record.colunm6,jdbcType=VARCHAR},
+      colunm7 = #{record.colunm7,jdbcType=VARCHAR},
+      colunm8 = #{record.colunm8,jdbcType=VARCHAR},
+      colunm9 = #{record.colunm9,jdbcType=VARCHAR},
+      colunm10 = #{record.colunm10,jdbcType=VARCHAR},
+      colunm11 = #{record.colunm11,jdbcType=VARCHAR},
+      colunm12 = #{record.colunm12,jdbcType=VARCHAR},
+      colunm13 = #{record.colunm13,jdbcType=VARCHAR},
+      colunm14 = #{record.colunm14,jdbcType=VARCHAR},
+      colunm15 = #{record.colunm15,jdbcType=VARCHAR},
+      colunm16 = #{record.colunm16,jdbcType=VARCHAR},
+      colunm17 = #{record.colunm17,jdbcType=VARCHAR},
+      colunm18 = #{record.colunm18,jdbcType=VARCHAR},
+      colunm19 = #{record.colunm19,jdbcType=VARCHAR},
+      colunm20 = #{record.colunm20,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.channelsoft.zlc.po.ZnkfZdwh" >
+    update znkf_zdwh
+    <set >
+      <if test="ywid != null" >
+        ywid = #{ywid,jdbcType=VARCHAR},
+      </if>
+      <if test="ywcjlx != null" >
+        ywcjlx = #{ywcjlx,jdbcType=VARCHAR},
+      </if>
+      <if test="ywlxdm != null" >
+        ywlxdm = #{ywlxdm,jdbcType=VARCHAR},
+      </if>
+      <if test="rwbh != null" >
+        rwbh = #{rwbh,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null" >
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null" >
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="telno1 != null" >
+        telno1 = #{telno1,jdbcType=VARCHAR},
+      </if>
+      <if test="telno2 != null" >
+        telno2 = #{telno2,jdbcType=VARCHAR},
+      </if>
+      <if test="callEndDate != null" >
+        call_end_date = #{callEndDate,jdbcType=VARCHAR},
+      </if>
+      <if test="expand1 != null" >
+        expand1 = #{expand1,jdbcType=VARCHAR},
+      </if>
+      <if test="expand2 != null" >
+        expand2 = #{expand2,jdbcType=VARCHAR},
+      </if>
+      <if test="modifiedPostAddress != null" >
+        modified_post_address = #{modifiedPostAddress,jdbcType=VARCHAR},
+      </if>
+      <if test="activityType != null" >
+        activity_type = #{activityType,jdbcType=VARCHAR},
+      </if>
+      <if test="dataDt != null" >
+        data_dt = #{dataDt,jdbcType=VARCHAR},
+      </if>
+      <if test="followupDays != null" >
+        followup_days = #{followupDays,jdbcType=INTEGER},
+      </if>
+      <if test="custNo != null" >
+        cust_no = #{custNo,jdbcType=VARCHAR},
+      </if>
+      <if test="isManaged != null" >
+        is_managed = #{isManaged,jdbcType=VARCHAR},
+      </if>
+      <if test="orgId != null" >
+        org_id = #{orgId,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="workPlace != null" >
+        work_place = #{workPlace,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null" >
+        occupation = #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductCode != null" >
+        exp_product_code = #{expProductCode,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductName != null" >
+        exp_product_name = #{expProductName,jdbcType=VARCHAR},
+      </if>
+      <if test="expProductAmt != null" >
+        exp_product_amt = #{expProductAmt,jdbcType=DECIMAL},
+      </if>
+      <if test="expireDate != null" >
+        expire_date = #{expireDate,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdTerm != null" >
+        exp_prod_term = #{expProdTerm,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdYields != null" >
+        exp_prod_yields = #{expProdYields,jdbcType=DECIMAL},
+      </if>
+      <if test="expProdAttribute != null" >
+        exp_prod_attribute = #{expProdAttribute,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdRisklevel != null" >
+        exp_prod_risklevel = #{expProdRisklevel,jdbcType=VARCHAR},
+      </if>
+      <if test="cardId != null" >
+        card_id = #{cardId,jdbcType=VARCHAR},
+      </if>
+      <if test="aumBal != null" >
+        aum_bal = #{aumBal,jdbcType=DECIMAL},
+      </if>
+      <if test="aum90 != null" >
+        aum_90 = #{aum90,jdbcType=DECIMAL},
+      </if>
+      <if test="reserveStat != null" >
+        reserve_stat = #{reserveStat,jdbcType=VARCHAR},
+      </if>
+      <if test="reserveFailReason != null" >
+        reserve_fail_reason = #{reserveFailReason,jdbcType=VARCHAR},
+      </if>
+      <if test="expProdSum != null" >
+        exp_prod_sum = #{expProdSum,jdbcType=DECIMAL},
+      </if>
+      <if test="totalSum != null" >
+        total_sum = #{totalSum,jdbcType=DECIMAL},
+      </if>
+      <if test="ivrResult != null" >
+        ivr_result = #{ivrResult,jdbcType=VARCHAR},
+      </if>
+      <if test="guipResult != null" >
+        guip_result = #{guipResult,jdbcType=VARCHAR},
+      </if>
+      <if test="totalResult != null" >
+        total_result = #{totalResult,jdbcType=VARCHAR},
+      </if>
+      <if test="failCount != null" >
+        fail_count = #{failCount,jdbcType=INTEGER},
+      </if>
+      <if test="insertDate != null" >
+        insert_date = #{insertDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateDate != null" >
+        update_date = #{updateDate,jdbcType=TIMESTAMP},
+      </if>
+      <if test="status != null" >
+        status = #{status,jdbcType=VARCHAR},
+      </if>
+      <if test="callStartTime != null" >
+        call_start_time = #{callStartTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callSpendTime != null" >
+        call_spend_time = #{callSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="callIvrSpendTime != null" >
+        call_ivr_spend_time = #{callIvrSpendTime,jdbcType=DECIMAL},
+      </if>
+      <if test="callStopTime != null" >
+        call_stop_time = #{callStopTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="callRecordId != null" >
+        call_record_id = #{callRecordId,jdbcType=VARCHAR},
+      </if>
+      <if test="homeAdd != null" >
+        home_add = #{homeAdd,jdbcType=VARCHAR},
+      </if>
+      <if test="sjyhJqhm != null" >
+        sjyh_jqhm = #{sjyhJqhm,jdbcType=VARCHAR},
+      </if>
+      <if test="yxtNum != null" >
+        yxt_num = #{yxtNum,jdbcType=VARCHAR},
+      </if>
+      <if test="pch != null" >
+        pch = #{pch,jdbcType=VARCHAR},
+      </if>
+      <if test="szOrgCode != null" >
+        sz_org_code = #{szOrgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="szOrgName != null" >
+        sz_org_name = #{szOrgName,jdbcType=VARCHAR},
+      </if>
+      <if test="managerId != null" >
+        manager_id = #{managerId,jdbcType=VARCHAR},
+      </if>
+      <if test="operType != null" >
+        oper_type = #{operType,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null" >
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="dzqdZcNum != null" >
+        dzqd_zc_num = #{dzqdZcNum,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null" >
+        id_type = #{idType,jdbcType=VARCHAR},
+      </if>
+      <if test="idNo != null" >
+        id_no = #{idNo,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm1 != null" >
+        colunm1 = #{colunm1,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm2 != null" >
+        colunm2 = #{colunm2,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm3 != null" >
+        colunm3 = #{colunm3,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm4 != null" >
+        colunm4 = #{colunm4,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm5 != null" >
+        colunm5 = #{colunm5,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm6 != null" >
+        colunm6 = #{colunm6,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm7 != null" >
+        colunm7 = #{colunm7,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm8 != null" >
+        colunm8 = #{colunm8,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm9 != null" >
+        colunm9 = #{colunm9,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm10 != null" >
+        colunm10 = #{colunm10,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm11 != null" >
+        colunm11 = #{colunm11,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm12 != null" >
+        colunm12 = #{colunm12,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm13 != null" >
+        colunm13 = #{colunm13,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm14 != null" >
+        colunm14 = #{colunm14,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm15 != null" >
+        colunm15 = #{colunm15,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm16 != null" >
+        colunm16 = #{colunm16,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm17 != null" >
+        colunm17 = #{colunm17,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm18 != null" >
+        colunm18 = #{colunm18,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm19 != null" >
+        colunm19 = #{colunm19,jdbcType=VARCHAR},
+      </if>
+      <if test="colunm20 != null" >
+        colunm20 = #{colunm20,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.channelsoft.zlc.po.ZnkfZdwh" >
+    update znkf_zdwh
+    set ywid = #{ywid,jdbcType=VARCHAR},
+      ywcjlx = #{ywcjlx,jdbcType=VARCHAR},
+      ywlxdm = #{ywlxdm,jdbcType=VARCHAR},
+      rwbh = #{rwbh,jdbcType=VARCHAR},
+      name = #{name,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      telno1 = #{telno1,jdbcType=VARCHAR},
+      telno2 = #{telno2,jdbcType=VARCHAR},
+      call_end_date = #{callEndDate,jdbcType=VARCHAR},
+      expand1 = #{expand1,jdbcType=VARCHAR},
+      expand2 = #{expand2,jdbcType=VARCHAR},
+      modified_post_address = #{modifiedPostAddress,jdbcType=VARCHAR},
+      activity_type = #{activityType,jdbcType=VARCHAR},
+      data_dt = #{dataDt,jdbcType=VARCHAR},
+      followup_days = #{followupDays,jdbcType=INTEGER},
+      cust_no = #{custNo,jdbcType=VARCHAR},
+      is_managed = #{isManaged,jdbcType=VARCHAR},
+      org_id = #{orgId,jdbcType=VARCHAR},
+      age = #{age,jdbcType=VARCHAR},
+      work_place = #{workPlace,jdbcType=VARCHAR},
+      occupation = #{occupation,jdbcType=VARCHAR},
+      exp_product_code = #{expProductCode,jdbcType=VARCHAR},
+      exp_product_name = #{expProductName,jdbcType=VARCHAR},
+      exp_product_amt = #{expProductAmt,jdbcType=DECIMAL},
+      expire_date = #{expireDate,jdbcType=VARCHAR},
+      exp_prod_term = #{expProdTerm,jdbcType=VARCHAR},
+      exp_prod_yields = #{expProdYields,jdbcType=DECIMAL},
+      exp_prod_attribute = #{expProdAttribute,jdbcType=VARCHAR},
+      exp_prod_risklevel = #{expProdRisklevel,jdbcType=VARCHAR},
+      card_id = #{cardId,jdbcType=VARCHAR},
+      aum_bal = #{aumBal,jdbcType=DECIMAL},
+      aum_90 = #{aum90,jdbcType=DECIMAL},
+      reserve_stat = #{reserveStat,jdbcType=VARCHAR},
+      reserve_fail_reason = #{reserveFailReason,jdbcType=VARCHAR},
+      exp_prod_sum = #{expProdSum,jdbcType=DECIMAL},
+      total_sum = #{totalSum,jdbcType=DECIMAL},
+      ivr_result = #{ivrResult,jdbcType=VARCHAR},
+      guip_result = #{guipResult,jdbcType=VARCHAR},
+      total_result = #{totalResult,jdbcType=VARCHAR},
+      fail_count = #{failCount,jdbcType=INTEGER},
+      insert_date = #{insertDate,jdbcType=TIMESTAMP},
+      update_date = #{updateDate,jdbcType=TIMESTAMP},
+      status = #{status,jdbcType=VARCHAR},
+      call_start_time = #{callStartTime,jdbcType=TIMESTAMP},
+      call_spend_time = #{callSpendTime,jdbcType=DECIMAL},
+      call_ivr_spend_time = #{callIvrSpendTime,jdbcType=DECIMAL},
+      call_stop_time = #{callStopTime,jdbcType=TIMESTAMP},
+      call_record_id = #{callRecordId,jdbcType=VARCHAR},
+      home_add = #{homeAdd,jdbcType=VARCHAR},
+      sjyh_jqhm = #{sjyhJqhm,jdbcType=VARCHAR},
+      yxt_num = #{yxtNum,jdbcType=VARCHAR},
+      pch = #{pch,jdbcType=VARCHAR},
+      sz_org_code = #{szOrgCode,jdbcType=VARCHAR},
+      sz_org_name = #{szOrgName,jdbcType=VARCHAR},
+      manager_id = #{managerId,jdbcType=VARCHAR},
+      oper_type = #{operType,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      dzqd_zc_num = #{dzqdZcNum,jdbcType=VARCHAR},
+      id_type = #{idType,jdbcType=VARCHAR},
+      id_no = #{idNo,jdbcType=VARCHAR},
+      colunm1 = #{colunm1,jdbcType=VARCHAR},
+      colunm2 = #{colunm2,jdbcType=VARCHAR},
+      colunm3 = #{colunm3,jdbcType=VARCHAR},
+      colunm4 = #{colunm4,jdbcType=VARCHAR},
+      colunm5 = #{colunm5,jdbcType=VARCHAR},
+      colunm6 = #{colunm6,jdbcType=VARCHAR},
+      colunm7 = #{colunm7,jdbcType=VARCHAR},
+      colunm8 = #{colunm8,jdbcType=VARCHAR},
+      colunm9 = #{colunm9,jdbcType=VARCHAR},
+      colunm10 = #{colunm10,jdbcType=VARCHAR},
+      colunm11 = #{colunm11,jdbcType=VARCHAR},
+      colunm12 = #{colunm12,jdbcType=VARCHAR},
+      colunm13 = #{colunm13,jdbcType=VARCHAR},
+      colunm14 = #{colunm14,jdbcType=VARCHAR},
+      colunm15 = #{colunm15,jdbcType=VARCHAR},
+      colunm16 = #{colunm16,jdbcType=VARCHAR},
+      colunm17 = #{colunm17,jdbcType=VARCHAR},
+      colunm18 = #{colunm18,jdbcType=VARCHAR},
+      colunm19 = #{colunm19,jdbcType=VARCHAR},
+      colunm20 = #{colunm20,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=BIGINT}
+  </update>
+</mapper>
