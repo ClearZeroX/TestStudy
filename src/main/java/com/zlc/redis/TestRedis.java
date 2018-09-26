@@ -15,7 +15,7 @@ public class TestRedis {
         jedis.connect();
         jedis.set("key1","values1");
 
-        String v1 = jedis.get("key1");
+        /*String v1 = jedis.get("key1");
         System.out.println(v1);
         System.out.println(jedis.keys("*"));
 
@@ -30,7 +30,7 @@ public class TestRedis {
         String v2 = jedis.get("key1");
         System.out.println(v2); // null
 
-        System.out.println(jedis.keys("*"));//[]
+        System.out.println(jedis.keys("*"));//[]*/
 
     }
 }

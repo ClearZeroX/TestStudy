@@ -1,7 +1,7 @@
 package com.zlc.generator.mapper;
 
-import com.channelsoft.zlc.po.ZnkfZdwh;
-import com.channelsoft.zlc.po.ZnkfZdwhExample;
+import com.zlc.generator.po.ZnkfZdwh;
+import com.zlc.generator.po.ZnkfZdwhExample;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 

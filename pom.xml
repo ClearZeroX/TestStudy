@@ -21,6 +21,8 @@
     <mybatis-version>3.4.1</mybatis-version>
     <mybatis-generator.version>1.3.2</mybatis-generator.version>
     <quartz-version>2.2.1</quartz-version>
+    <jackson.version>2.8.4</jackson.version>
+    <fastjson.version>1.2.11</fastjson.version>
     <!--  Java接口和实体类  -->
     <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
     <!-- mapper和po生成路径,需要手动指定-->
@@ -33,6 +35,39 @@
   </properties>
 
   <dependencies>
+
+    <!--activityMq-->
+    <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
+    <dependency>
+      <groupId>org.apache.activemq</groupId>
+      <artifactId>activemq-core</artifactId>
+      <version>5.7.0</version>
+    </dependency>
+
+
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>fastjson</artifactId>
+      <version>${fastjson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-core</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-annotations</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.fasterxml.jackson.core</groupId>
+      <artifactId>jackson-databind</artifactId>
+      <version>${jackson.version}</version>
+    </dependency>
 
     <!--quartz-->
     <dependency>
@@ -75,6 +110,31 @@
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
       <version>3.1.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>RELEASE</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+    </dependency>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
     </dependency>
   </dependencies>
 
