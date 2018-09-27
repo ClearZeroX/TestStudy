@@ -1,0 +1,25 @@
+三种基于时间的清理或刷新缓存数据的方式：
+expireAfterAccess: 当缓存项在指定的时间段内没有被读或写就会被回收。
+expireAfterWrite：当缓存项在指定的时间段内没有更新就会被回收。
+refreshAfterWrite：当缓存项上一次更新操作之后的多久会被刷新。
+
+常用用法：
+    LoadingCache<Key, Graph> graphs = CacheBuilder.newBuilder()
+            .maximumSize(1000)
+            .expireAfterWrite(10, TimeUnit.MINUTES)
+            .removalListener(MY_LISTENER)
+            .build(
+                    new CacheLoader<Key, Graph>() {
+                        public Graph load(Key key) throws AnyException {
+                            return createExpensiveGraph(key);
+                        }
+                    });
+
+项目中用法：
+    private LoadingCache<QueryEptAdsInfoVo, String> eptAdsInfoCache =CacheBuilder.newBuilder().softValues().maximumSize(5000).expireAfterWrite(1,TimeUnit.MINUTES)
+            .build(new CacheLoader<QueryEptAdsInfoVo,String>() {
+                @Override
+                public String load(final QueryEptAdsInfoVo tmp) throws Exception {
+　　                  //代码逻辑
+                }
+            });

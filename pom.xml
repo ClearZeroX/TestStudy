@@ -36,6 +36,13 @@
 
   <dependencies>
 
+    <!--Google的本地缓存，CacheBuilder-->
+    <dependency>
+      <groupId>com.google.guava</groupId>
+      <artifactId>guava</artifactId>
+      <version>22.0</version>
+    </dependency>
+
     <!--activityMq-->
     <!-- https://mvnrepository.com/artifact/org.apache.activemq/activemq-core -->
     <dependency>
